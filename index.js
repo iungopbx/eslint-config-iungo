@@ -7,6 +7,7 @@ module.exports = {
         es6: true,
         mocha: true
     },
+    extends: 'eslint:recommended',
     parser: 'babel-eslint',
     parserOptions: {
         ecmaFeatures: {
@@ -15,8 +16,7 @@ module.exports = {
         },
         sourceType: 'module'
     },
-    plugins: ['react', 'import', 'iungo', 'sonarjs'],
-    extends: ['eslint:recommended', 'plugin:iungo/all', 'plugin:sonarjs/recommended'],
+    plugins: ['react'],
     globals: {
         chai: true,
         expect: true,
@@ -87,9 +87,6 @@ module.exports = {
         // http://eslint.org/docs/rules/no-control-regex
         'no-control-regex': 'error',
 
-        // https://eslint.org/docs/rules/no-else-return
-        'no-else-return': 'error',
-
         // disallow empty block statements
         // http://eslint.org/docs/rules/no-empty
         'no-empty': 'error',
@@ -113,9 +110,6 @@ module.exports = {
         // disallow undeclared variables
         // http://eslint.org/docs/rules/no-undef
         'no-undef': 'error',
-
-        // https://eslint.org/docs/rules/no-unneeded-ternary
-        'no-unneeded-ternary': 'error',
 
         // disallow unused import, disallow unused expressions
         // http://eslint.org/docs/rules/no-unused-expressions
@@ -146,9 +140,6 @@ module.exports = {
         // http://eslint.org/docs/rules/no-with
         'no-with': 'error',
 
-        // https://eslint.org/docs/rules/object-shorthand
-        'object-shorthand': 'error',
-
         // require one `var` or `let` or 'const` for each variable/const. disallow multiple declarations
         // http://eslint.org/docs/rules/one-var
         'one-var': ['error', 'never'],
@@ -170,12 +161,6 @@ module.exports = {
                 asyncArrow: 'always'
             }
         ],
-
-
-        // import specifics
-
-        // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md
-        'import/no-default-export': 'error',
 
 
         // react specifics
@@ -298,30 +283,7 @@ module.exports = {
 
         // disallow children for self-closing HTML elements like <br />
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
-        'react/void-dom-elements-no-children': 'error',
+        'react/void-dom-elements-no-children': 'error'
 
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/cognitive-complexity.md
-        'sonarjs/cognitive-complexity': 'warn',
-        
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-identical-functions.md
-        'sonarjs/no-identical-functions': 'warn',
-
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-extra-arguments.md
-        'sonarjs/no-extra-arguments': 'warn',
-
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/prefer-object-literal.md
-        'sonarjs/prefer-object-literal': 'warn',
-
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-redundant-boolean.md
-        'sonarjs/no-redundant-boolean': 'warn',
-
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-collapsible-if.md
-        'sonarjs/no-collapsible-if': 'warn',
-
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-duplicate-string.md
-        'sonarjs/no-duplicate-string': 'off',
-
-        // https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-small-switch.md
-        'sonarjs/no-small-switch': 'off'
     }
 };
